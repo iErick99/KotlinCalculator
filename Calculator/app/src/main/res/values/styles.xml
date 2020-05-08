@@ -1,0 +1,35 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="windowActionBar"> false </item>
+        <item name="windowNoTitle"> true </item>
+    </style>
+
+    <style name="FunctionalButtons">
+        <item name="android:textSize"> 40sp </item>
+        <item name="android:minHeight"> 104sp </item>
+        <item name="android:textColor"> @color/colorAccent </item>
+        <item name="android:background"> @drawable/functional_round_button </item>
+    </style>
+
+    <style name="NumberButtons">
+        <item name="android:textSize"> 40sp </item>
+        <item name="android:minHeight"> 104sp </item>
+        <item name="android:textColor"> @color/colorNumberButtonText </item>
+        <item name="android:background"> @drawable/number_round_button </item>
+    </style>
+
+    <style name="EqualsButton">
+        <item name="android:textSize"> 40sp </item>
+        <item name="android:minHeight"> 104sp </item>
+        <item name="android:textColor"> @color/colorEqualsButtonText </item>
+        <item name="android:background"> @drawable/equals_button </item>
+    </style>
+    
+</resources>
