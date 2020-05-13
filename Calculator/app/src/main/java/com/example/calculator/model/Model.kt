@@ -1,6 +1,8 @@
 package com.example.calculator.model
 
 import java.util.*
+import java.util.regex.Pattern
+import kotlin.math.*
 
 class Model {
 
@@ -30,20 +32,48 @@ class Model {
 
     }
 
-    fun evaluateExpression(): Int {
+    fun evaluateExpression(): Double {
 
         val sc = Scanner(expression)
-        val firstValue: Int = sc.findInLine("[0-9]*").toInt()
-        val operator: String = sc.findInLine("[^0-9]*").trim()
-        val secondValue: Int = sc.findInLine("[0-9]*").toInt()
+        var firstValue: Double? = null
+        var secondValue: Double = 0.0
 
-        return when (operator) {
-            "+" -> firstValue + secondValue
-            "-" -> firstValue - secondValue
-            "/" -> firstValue / secondValue
-            "*" -> firstValue * secondValue
-            "%" -> firstValue % secondValue
-            else -> throw RuntimeException("Unknown operator: $operator")
+        if (sc.hasNextDouble()) {
+
+            firstValue = sc.nextDouble()
+
+        }
+
+        val operator: String = sc.findInLine("[^0-9]*").trim()
+
+        if (sc.hasNextDouble()) {
+
+            secondValue = sc.nextDouble()
+
+        }
+
+        if (firstValue != null) {
+            return when (operator) {
+                "+" -> firstValue + secondValue
+                "-" -> firstValue - secondValue
+                "/" -> firstValue / secondValue
+                "*" -> firstValue * secondValue
+                "%" -> firstValue % secondValue
+                "^" -> firstValue.pow(secondValue)
+                else -> throw RuntimeException("Unknown operator: $operator")
+            }
+        } else {
+            return when (operator) {
+                "SIN(" -> sin(secondValue)
+                "COS(" -> cos(secondValue)
+                "TAN(" -> tan(secondValue)
+                "CSC(" -> asin(secondValue)
+                "SEC(" -> acos(secondValue)
+                "CTG(" -> atan(secondValue)
+                "√" -> sqrt(secondValue)
+                else -> throw RuntimeException("Unknown operator: $operator")
+            }
+
         }
 
     }

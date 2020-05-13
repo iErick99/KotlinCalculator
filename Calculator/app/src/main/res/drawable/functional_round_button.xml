@@ -4,6 +4,6 @@
     android:shape="rectangle">
 
     <solid android:color="@color/colorFunctionalButtonBackground"/>
-    <corners android:radius="30dp"/>
+    <corners android:radius="20dp"/>
 
 </shape>

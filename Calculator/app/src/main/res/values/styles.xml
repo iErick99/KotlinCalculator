@@ -13,21 +13,21 @@
 
     <style name="FunctionalButtons">
         <item name="android:textSize"> 40sp </item>
-        <item name="android:minHeight"> 104sp </item>
+        <item name="android:minHeight"> 60sp </item>
         <item name="android:textColor"> @color/colorAccent </item>
         <item name="android:background"> @drawable/functional_round_button </item>
     </style>
 
     <style name="NumberButtons">
         <item name="android:textSize"> 40sp </item>
-        <item name="android:minHeight"> 104sp </item>
+        <item name="android:minHeight"> 60sp </item>
         <item name="android:textColor"> @color/colorNumberButtonText </item>
         <item name="android:background"> @drawable/number_round_button </item>
     </style>
 
     <style name="EqualsButton">
         <item name="android:textSize"> 40sp </item>
-        <item name="android:minHeight"> 104sp </item>
+        <item name="android:minHeight"> 60sp </item>
         <item name="android:textColor"> @color/colorEqualsButtonText </item>
         <item name="android:background"> @drawable/equals_button </item>
     </style>
